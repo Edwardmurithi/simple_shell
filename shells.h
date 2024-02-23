@@ -11,6 +11,7 @@
 void show_prompt(void);
 void edqu_prints(const char *note);
 void execute_order(const char *order);
+void get_command_from_user(char *order, size_t size);
 
 
 

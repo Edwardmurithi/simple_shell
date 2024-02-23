@@ -16,7 +16,7 @@ void execute_order(const char *order)
 	} else if (offspring_pid == 0)
 	{
 		/*child process*/
-		execlp(order, ordr, (char *) NULL);
+		execlp(order, order, (char *)NULL);
 		perror("execlp");
 		exit(EXIT_FAILURE);
 	} else

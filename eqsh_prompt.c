@@ -1,4 +1,4 @@
-#include "shells.c"
+#include "shells.h"
 /**
  * show_prompt - displays the prompt
  * @void: parameters to display

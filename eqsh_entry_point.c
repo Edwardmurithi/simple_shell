@@ -12,5 +12,8 @@ int main(void)
 	while (true)
 	{
 		show_prompt();
+		get_command_from_user(eq_order, sizeof(eq_order));
+		execute_order(eq_order);
 	}
+	return 0;
 }
