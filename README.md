@@ -1,1 +1,2 @@
-0x16. C - Simple Shell
+Simple_shell
+This is a group project for me and my friend
