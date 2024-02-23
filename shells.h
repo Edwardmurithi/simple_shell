@@ -6,7 +6,11 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
+void show_prompt(void);
+void edqu_prints(const char *note);
+void execute_order(const char *order);
 
 
 
