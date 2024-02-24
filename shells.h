@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <sys/wait.h>
 
 void show_prompt(void);
 void edqu_prints(const char *note);
