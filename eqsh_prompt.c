@@ -8,5 +8,5 @@
 
 void show_prompt(void)
 {
-	edqu_prints("edqu_shell$");
+	edqu_prints("edqu_shell$ ");
 }
