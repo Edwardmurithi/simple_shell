@@ -9,5 +9,5 @@
 /*Displays a cmdline prompt to the user*/
 void get_func_prompt_displayed(void)
 {
-	get_func_writes("$");
+	get_func_writes("$ ");
 }

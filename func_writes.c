@@ -8,5 +8,5 @@
 /*acts as printf function*/
 void get_func_writes(const char *_string)
 {
-	write(STDOUT_FILENO, &_string, strlen(_string));
+	write(STDOUT_FILENO, _string, strlen(_string));
 }
