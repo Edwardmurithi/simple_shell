@@ -14,5 +14,7 @@ void get_func_prompt_displayed(void);
 void get_func_writes(const char *_string);
 void get_func_read_commands(char *_string, size_t size);
 void get_func_execute(const char *_string);
+void get_func_parse(char *_string, char **args);
+int get_func_cd(char **args);
 
 #endif 

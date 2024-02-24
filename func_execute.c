@@ -13,13 +13,15 @@ void get_func_execute(const char *_string)
 	{
 		perror("fork");
 		exit(EXIT_FAILURE);
-	} else if (process_pid == 0)
+	}
+	else if (process_pid == 0)
 	{
 		/*child prSocess*/
 		execlp(_string, _string, (char *)NULL);
 		perror("execlp");
 		exit(EXIT_FAILURE);
-	} else
+	}
+	else
 	{
 		/*Parent Process*/
 		wait(NULL);

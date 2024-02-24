@@ -1,24 +1,22 @@
 #include "shells.h"
-/**
- * get_func_read_commands - function to accept input from user
- * @_string: pointer to character
- * @size: size of inputs
- * Return: input
- */
 
-void get_func_read_commands(char *_string, size_t size)
+/**
+ * get_func_parse - Function to parse the command line
+ * @_string: The command line to be parsed
+ * @args: Array to store the parsed arguments
+ */
+void get_func_parse(char *_string, char **args)
 {
-	if (fgets(_string, size, stdin) == NULL)
+	char *token;
+	int counter = 0;
+
+	token = strtok(_string, " \t\n");
+
+	while (token != NULL && counter < 10 - 1)
 	{
-		if (feof(stdin))
-		{
-			get_func_writes("\n");
-			exit(EXIT_SUCCESS);
-		} else
-		{
-			perror("fgets");
-			exit(EXIT_FAILURE);
-		}
+		args[counter++] = token;
+		token = strtok(NULL, " \t\n");
 	}
-		_string[strcspn(_string, "\n")] = '\0';
+
+	args[counter] = NULL;
 }
