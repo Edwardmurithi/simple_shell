@@ -7,23 +7,26 @@
 
 void get_func_execute(const char *_string)
 {
-	pid_t child_pid = fork();
+    pid_t process_pid = fork();
 
-	if (child_pid == -1)
-	{
-		perror("fork");
-		exit(EXIT_FAILURE);
-	}
-	else if (child_pid == 0)
-	{
-		/*child process*/
-		execlp(_string, _string, (char *)NULL);
-		perror("execlp");
-		exit(EXIT_FAILURE);
-	}
-	else
-	{
-		/*Parent Process*/
-		wait(NULL);
-	}
+    if (process_pid == -1)
+    {
+        perror("fork");
+        exit(EXIT_FAILURE);
+    }
+    else if (process_pid == 0)
+    {
+        /* child process */
+    	char *args[] = {"/bin/sh", "-c", _string, NULL};
+    	if (execve(args[0], args, NULL) == -1)
+        {
+            perror("execve");
+            exit(EXIT_FAILURE);
+        }
+    }
+    else
+    {
+        /* Parent Process */
+        wait(NULL);
+    }
 }

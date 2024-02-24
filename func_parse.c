@@ -1,18 +1,18 @@
 #include "shells.h"
 /**
- * get_user_commands - function to accept input from user
+ * get_func_read_commands - function to accept input from user
  * @_string: pointer to character
  * @size: size of inputs
  * Return: input
  */
 
-void get_user_commands(char *_string, size_t size)
+void get_func_read_commands(char *_string, size_t size)
 {
 	if (fgets(_string, size, stdin) == NULL)
 	{
 		if (feof(stdin))
 		{
-			func_writes("\n");
+			get_func_writes("\n");
 			exit(EXIT_SUCCESS);
 		} else
 		{

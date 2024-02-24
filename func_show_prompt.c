@@ -1,12 +1,13 @@
 #include "shells.h"
 /**
- * get_func_prompt - displays the prompt
+ * void get_func_prompt_displayed - displays the prompt
  * @void: parameters to display
  * Return: prompt
  */
 
 
-void get_func_prompt(void)
+/*Displays a cmdline prompt to the user*/
+void get_func_prompt_displayed(void)
 {
-	func_writes("$");
+	get_func_writes("$");
 }

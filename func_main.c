@@ -11,9 +11,10 @@ int main(void)
 
 	while (true)
 	{
-		get_func_prompt();
-		get_user_commands(_string, sizeof(_string))
-		get_func_execute(_string)
+		get_func_prompt_displayed();
+		get_func_read_commands(_string, sizeof(_string));
+		get_func_execute(_string);
 	}
-	return 0;
+	
+	return (0);
 }
