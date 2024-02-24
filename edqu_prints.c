@@ -8,5 +8,5 @@
 
 void edqu_prints(const char *note)
 {
-	write(STDOUT_FILENO, &note, strlen(note));
+	write(STDOUT_FILENO, note, strlen(note));
 }
