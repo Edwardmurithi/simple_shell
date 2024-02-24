@@ -1,18 +1,18 @@
 #include "shells.h"
 /**
- * get_command_from_user - function to accept input from user
- * @order: pointer to character
+ * get_user_commands - function to accept input from user
+ * @_string: pointer to character
  * @size: size of inputs
  * Return: input
  */
 
-void get_command_from_user(char *order, size_t size)
+void get_user_commands(char *_string, size_t size)
 {
-	if (fgets(order, size, stdin) == NULL)
+	if (fgets(_string, size, stdin) == NULL)
 	{
 		if (feof(stdin))
 		{
-			edqu_prints("\n");
+			func_writes("\n");
 			exit(EXIT_SUCCESS);
 		} else
 		{
@@ -20,5 +20,5 @@ void get_command_from_user(char *order, size_t size)
 			exit(EXIT_FAILURE);
 		}
 	}
-		order[strcspn(order, "\n")] = '\0';
+		_string[strcspn(_string, "\n")] = '\0';
 }

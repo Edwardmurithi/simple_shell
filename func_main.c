@@ -11,9 +11,9 @@ int main(void)
 
 	while (true)
 	{
-		show_prompt();
-		get_command_from_user(_string, sizeof(_string));
-		execute_order(_string);
+		get_func_prompt();
+		get_user_commands(_string, sizeof(_string))
+		get_func_execute(_string)
 	}
 	return 0;
 }

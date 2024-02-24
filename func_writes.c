@@ -5,8 +5,8 @@
  * Return: Printed output
  */
 
-
-void edqu_prints(const char *note)
+/*My printf function*/
+void func_writes(const char *_string)
 {
-	write(STDOUT_FILENO, &note, strlen(note));
+	write(STDOUT_FILENO, &_string, strlen(_string));
 }

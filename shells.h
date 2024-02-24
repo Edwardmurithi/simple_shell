@@ -10,10 +10,8 @@
 #include <sys/wait.h>
 
 void show_prompt(void);
-void edqu_prints(const char *note);
-void execute_order(const char *order);
-void get_command_from_user(char *order, size_t size);
-
-
+void func_writes(const char *_string);
+void get_func_execute(const char *_string)
+void get_user_commands(char *_string, size_t size)
 
 #endif 
