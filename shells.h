@@ -7,6 +7,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stddef.h>
+#include <sys/wait.h>
 
 void get_func_prompt_displayed(void);
 void get_func_writes(const char *_string);
