@@ -7,14 +7,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <sys/wait.h>
-#include <sys/types.h>
 
-void show_prompt(void);
-void edqu_prints(const char *note);
-void execute_order(const char *order);
-void get_command_from_user(char *order, size_t size);
-
-
+void get_func_prompt_displayed(void);
+void get_func_writes(const char *_string);
+void get_func_read_commands(char *_string, size_t size);
+void get_func_execute(const char *_string);
+void get_func_parse(char *_string, char **args);
+int get_func_cd(char **args);
 
 #endif 
