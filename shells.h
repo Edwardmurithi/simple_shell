@@ -17,4 +17,4 @@ void get_func_execute(const char *_string);
 void get_func_parse(char *_string, char **args);
 int get_func_cd(char **args);
 
-#endif 
+#endif

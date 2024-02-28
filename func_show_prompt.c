@@ -1,6 +1,6 @@
 #include "shells.h"
 /**
- * void get_func_prompt_displayed - displays the prompt
+ * get_func_prompt_displayed - displays the prompt
  * @void: parameters to display
  * Return: prompt
  */

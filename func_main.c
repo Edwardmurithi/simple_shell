@@ -17,6 +17,5 @@ int main(void)
 		get_func_parse(_string, args);
 		get_func_execute(_string);
 	}
-	
 	return (0);
 }
