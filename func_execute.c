@@ -16,9 +16,17 @@ void get_func_execute(const char *_string)
 	}
 	else if (process_pid == 0)
 	{
-		/*child prSocess*/
-		execlp(_string, _string, (char *)NULL);
-		perror("execlp");
+		/*child process*/
+		char _string_path[256];
+
+		snprintf(_string_path, sizeof(_string_path), "/bin/%s", _string);
+		char *args[];
+
+		args[] = {_string, NULL};
+
+		execve(_string_path, args, NULL);
+
+		perror("execve");
 		exit(EXIT_FAILURE);
 	}
 	else
